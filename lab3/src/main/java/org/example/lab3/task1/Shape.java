@@ -1,4 +1,4 @@
-package org.example.lab3;
+package org.example.lab3.task1;
 
 public abstract class Shape implements Drawable {
     private final String shapeColor;

@@ -1,4 +1,4 @@
-package org.example.lab3;
+package org.example.lab3.task1;
 
 public class Rectangle extends Shape {
     private final double width;

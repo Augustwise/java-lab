@@ -1,4 +1,4 @@
-package org.example.lab3;
+package org.example.lab3.task1;
 
 public class ShapeController {
     private final ShapeModel model;
@@ -13,7 +13,8 @@ public class ShapeController {
         view.printShapes("Initial data set:", model.getShapes());
 
         view.printArea("Total area of all shapes", model.calcTotalArea());
-        view.printArea("Total area of triangles",
+        view.printArea(
+                "Total area of triangles",
                 model.calcTotalAreaByType(Triangle.class));
 
         model.sort(new ShapeAreaComparator());
