@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class VehicleTest {
     @Test
+    // Bus і Taxi мають приймати пасажирів будь-якого типу (Person, Firefighter, PoliceOfficer)
     void busAndTaxiAcceptAllPassengerKinds() {
         Bus bus = new Bus(3);
         Taxi taxi = new Taxi(3);
@@ -26,6 +27,7 @@ class VehicleTest {
     }
 
     @Test
+    // FireTruck приймає лише Firefighter, а PoliceCar — лише PoliceOfficer (перевірка на рівні типів)
     void specializedAutomobilesAcceptTheirRequiredPassengerType() {
         FireTruck fireTruck = new FireTruck(2);
         PoliceCar policeCar = new PoliceCar(2);
@@ -41,6 +43,7 @@ class VehicleTest {
     }
 
     @Test
+    // Посадка в заповнений транспорт (усі місця зайняті) має кидати TransportFullException
     void boardingIntoFullVehicleThrowsException() {
         Taxi taxi = new Taxi(1);
         taxi.board(new Person("Oleh"));
@@ -49,6 +52,8 @@ class VehicleTest {
     }
 
     @Test
+    // Висадка пасажира, якого немає в салоні, кидає PassengerNotFoundException;
+    // висадка реального пасажира коректно зменшує кількість місць
     void disembarkingAbsentPassengerThrowsException() {
         Bus bus = new Bus(2);
         Person aboard = new Person("Oleh");
@@ -62,6 +67,7 @@ class VehicleTest {
     }
 
     @Test
+    // Road коректно рахує пасажирів у різних авто (з різними generic-типами пасажирів) на дорозі
     void roadCountsPassengersInCarsWithDifferentGenericTypes() {
         Taxi taxi = new Taxi(3);
         FireTruck fireTruck = new FireTruck(2);

@@ -15,6 +15,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "{" + name + '}';
+        return getClass().getSimpleName() + "{" + name + '}'; // Example: Firefighter{Ihor}
     }
 }

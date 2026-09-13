@@ -28,6 +28,7 @@ public abstract class Vehicle<P extends Person> {
         return Collections.unmodifiableList(passengers);
     }
 
+    // Посадка пассажира
     public void board(P passenger) {
         Objects.requireNonNull(passenger, "Passenger must not be null");
         if (passengers.size() == capacity) {
@@ -35,7 +36,7 @@ public abstract class Vehicle<P extends Person> {
         }
         passengers.add(passenger);
     }
-
+    // Висадка
     public void disembark(P passenger) {
         Objects.requireNonNull(passenger, "Passenger must not be null");
         if (!passengers.remove(passenger)) {

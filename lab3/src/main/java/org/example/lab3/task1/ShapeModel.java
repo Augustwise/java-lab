@@ -14,6 +14,9 @@ public class ShapeModel {
         return shapes;
     }
 
+    /**
+     * Обчислює сумарну площу всіх фігур набору даних
+     */
     public double calcTotalArea() {
         double totalArea = 0;
 
@@ -24,6 +27,9 @@ public class ShapeModel {
         return totalArea;
     }
 
+    /**
+     * Обчислює сумарну площу фігур заданого виду
+     */
     public double calcTotalAreaByType(Class<? extends Shape> shapeType) {
         double totalArea = 0;
 
