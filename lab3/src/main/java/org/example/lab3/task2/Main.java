@@ -26,6 +26,7 @@ public class Main {
         printResult("Студентська картка на 5 поїздок", turnstile.tryToPass(studentCard, today));
         printResult("Звичайна картка з балансом", turnstile.tryToPass(regularCard, today));
 
+        // Студент намагається пройти ще 5 разів (хоча залишилось лише 4 поїздки)
         for (int i = 0; i < 5; i++) {
             turnstile.tryToPass(studentCard, today);
         }

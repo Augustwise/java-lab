@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.util.EnumMap;
 import java.util.Map;
 
+
+/**
+ * Турнікет
+ */
 public class Turnstile {
     private final CardRegistry registry;
     private int allowedPassages;
@@ -13,6 +17,7 @@ public class Turnstile {
 
     public Turnstile(CardRegistry registry) {
         this.registry = registry;
+        // Ініціалізуємо статистику по типам пасажирів
         for (PassengerType type : PassengerType.values()) {
             allowedByType.put(type, 0);
             deniedByType.put(type, 0);

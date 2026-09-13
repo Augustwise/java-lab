@@ -3,7 +3,14 @@ package org.example.lab3.task2;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * Клас, що моделює систему обліку (реєстр) виданих карток.
+ * Виконує три основні функції:
+ * 1. Випуск нових карток різних типів.
+ * 2. Збереження їх у внутрішній базі даних та контроль унікальності ID.
+ * 3. Перевірка справжності картки (чи дійсно вона зареєстрована в системі),
+ *    яку використовує турнікет перед зняттям коштів/поїздок.
+ */
 public class CardRegistry {
     private final Map<String, TravelCard> cards = new HashMap<>();
 

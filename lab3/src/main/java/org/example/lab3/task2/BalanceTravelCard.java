@@ -1,9 +1,12 @@
 package org.example.lab3.task2;
 
 import java.time.LocalDate;
-
+/**
+ * Накопичувальна картка без обмежень по терміну дії.
+ */
 public class BalanceTravelCard extends TravelCard {
     private double balance;
+    // Ціна однієї поїздки
     private final double fare;
 
     public BalanceTravelCard(

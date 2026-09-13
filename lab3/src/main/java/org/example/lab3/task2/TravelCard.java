@@ -2,6 +2,7 @@ package org.example.lab3.task2;
 
 import java.time.LocalDate;
 
+// Проїзна карта
 public abstract class TravelCard {
     private final String id;
     private final PassengerType passengerType;
