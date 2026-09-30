@@ -20,6 +20,7 @@ public abstract class Vehicle<P extends Person> {
         return capacity;
     }
 
+    // поточна к-сть зайнятих місць
     public int getOccupiedSeats() {
         return passengers.size();
     }
