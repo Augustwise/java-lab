@@ -26,6 +26,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть рядок англійських слів:");
+        if (!scanner.hasNextLine()) {
+            System.out.println("Рядок не введено.");
+            return;
+        }
         String line = scanner.nextLine();
         System.out.println(Arrays.toString(findWords(line)));
     }
